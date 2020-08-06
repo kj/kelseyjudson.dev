@@ -38,6 +38,7 @@ section > h1 {
 }
 section > * + h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.667rem;
   margin-top: 2.5rem;
   padding-bottom: 0.5rem;
 }
