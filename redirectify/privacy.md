@@ -45,8 +45,8 @@ We may update this privacy policy from time to time in order to reflect, for
 example, changes to our practices or for other operational, legal or regulatory
 reasons.
 
-Contact us
-----------
+Contact
+-------
 
 Contact us for more information about our privacy practices, if you have
 questions, or if you would like to make a complaint. Please contact us by email
