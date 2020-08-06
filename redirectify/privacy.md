@@ -31,8 +31,8 @@ communicate with you; providing support, or information about **the App.**
 Sharing your personal information
 ---------------------------------
 
-We will not share personal information of you or your customers with any third
-party unless strictly required to enable us to provide **the Service.**
+We will not share the personal information of you or your customers with any
+third party unless strictly required to enable us to provide **the Service.**
 
 Finally, we may also share your personal information to comply with applicable
 laws and regulations, to respond to a subpoena, search warrant or other lawful
