@@ -1,0 +1,69 @@
+:root {
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+main {
+  max-width: 100vw;
+  padding: 4rem;
+  width: calc(8rem + 72ch);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section > * + * {
+  margin-top: 0.5rem;
+}
+section > * + h1,
+section > * + h2,
+section > * + h3 {
+  margin-top: 3rem;
+}
+section > h1 {
+  margin-bottom: 2.5rem; 
+}
+section > * + h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+ul {
+  margin: 1rem 0;
+}
+li {
+  list-style: none;
+  margin-left: 1rem;
+}
+li::before {
+  content: '•';
+  margin-right: 1rem;
+}
+
+.lead {
+  font-size: 1.5em;
+}
+
+.welcome {
+  text-align: center;
+}
