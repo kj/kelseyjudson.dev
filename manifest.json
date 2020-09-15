@@ -1,0 +1,164 @@
+{
+  "campaignified": {
+    "docs": {
+      "categories": [
+        {
+          "name": "General",
+          "slug": "general",
+          "articles": [
+            {
+              "name": "Getting started with Campaignified",
+              "slug": "getting-started-with-campaignified"
+            },
+            {
+              "name": "Using a newsletter signup form",
+              "slug": "using-a-newsletter-signup-form"
+            },
+            {
+              "name": "How does Shopify handle consent for email marketing?",
+              "slug": "how-does-shopify-handle-consent-for-email-marketing"
+            },
+            {
+              "name": "How do I set up email campaigns and manage segments and lists?",
+              "slug": "how-do-i-set-up-email-campaigns-and-manage-segments-and-lists"
+            },
+            {
+              "name": "What is the difference between Campaignified and Campaign Monitor?",
+              "slug": "what-is-the-difference-between-campaignified-and-campaign-monitor"
+            },
+            {
+              "name": "When are customers unsubscribed and/or resubscribed?",
+              "slug": "when-are-customers-unsubscribed-and-or-resubscribed"
+            },
+            {
+              "name": "When exactly is customer data synced?",
+              "slug": "when-exactly-is-customer-data-synced"
+            },
+            {
+              "name": "Why does Campaignified use product IDs and where can I find them?",
+              "slug": "why-does-campaignified-use-product-ids-and-where-can-i-find-them"
+            }
+          ]
+        },
+        {
+          "name": "Campaign Monitor",
+          "slug": "campaign-monitor",
+          "articles": [
+            {
+              "name": "Filtering subscribers by products ordered",
+              "slug": "filtering-subscribers-by-products-ordered"
+            },
+            {
+              "name": "Should I use a pre-existing list?",
+              "slug": "should-i-use-a-pre-existing-list"
+            },
+            {
+              "name": "Suggestions for email templates",
+              "slug": "suggestions-for-email-templates"
+            },
+            {
+              "name": "Suggestions for list segments",
+              "slug": "suggestions-for-list-segments"
+            },
+            {
+              "name": "What happens when I ‘unlink’ my Campaign Monitor account?",
+              "slug": "what-happens-when-i-unlink-my-campaign-monitor-account"
+            },
+            {
+              "name": "Why don’t my existing customers receive a welcome email?",
+              "slug": "why-dont-my-existing-customers-receive-a-welcome-email"
+            },
+            {
+              "name": "Why has my custom field data been truncated?",
+              "slug": "why-has-my-custom-field-data-been-truncated"
+            }
+          ]
+        },
+        {
+          "name": "Pricing and plans",
+          "slug": "pricing-and-plans",
+          "articles": [
+            {
+              "name": "Can I use Campaignified for free?",
+              "slug": "can-i-use-campaignified-for-free"
+            },
+            {
+              "name": "Order history tracking fields",
+              "slug": "order-history-tracking-fields"
+            },
+            {
+              "name": "Do I need to reselect my list when I upgrade my plan?",
+              "slug": "do-i-need-to-reselect-my-list-when-i-upgrade-my-plan"
+            },
+            {
+              "name": "What happens to custom field data when I downgrade my plan?",
+              "slug": "what-happens-to-custom-field-data-when-i-downgrade-my-plan"
+            }
+          ]
+        }
+      ]
+    },
+    "name": "Campaignified",
+    "slug": "campaignified"
+  },
+  "redirectify": {
+    "docs": {
+      "categories": [
+        {
+          "name": "General",
+          "slug": "general",
+          "articles": [
+            {
+              "name": "Getting started with Redirectify",
+              "slug": "getting-started-with-redirectify"
+            },
+            {
+              "name": "Live tracking",
+              "slug": "live-tracking"
+            },
+            {
+              "name": "Proactive tracking",
+              "slug": "proactive-tracking"
+            },
+            {
+              "name": "Rules",
+              "slug": "rules"
+            },
+            {
+              "name": "Filters",
+              "slug": "filters"
+            },
+            {
+              "name": "What happened to Google Search Console?",
+              "slug": "what-happened-to-google-search-console"
+            },
+            {
+              "name": "Why not use another redirect app?",
+              "slug": "why-not-use-another-redirect-app"
+            },
+            {
+              "name": "Why am I not seeing any suggestions?",
+              "slug": "why-am-i-not-seeing-any-suggestions"
+            }
+          ]
+        },
+        {
+          "name": "Shopify",
+          "slug": "shopify",
+          "articles": [
+            {
+              "name": "Does Redirectify create 302 or 301 redirects?",
+              "slug": "does-redirectify-create-302-or-301-redirects"
+            },
+            {
+              "name": "How can I manage or remove existing redirects?",
+              "slug": "how-can-i-manage-or-remove-existing-redirects"
+            }
+          ]
+        }
+      ]
+    },
+    "name": "Redirectify",
+    "slug": "redirectify"
+  }
+}

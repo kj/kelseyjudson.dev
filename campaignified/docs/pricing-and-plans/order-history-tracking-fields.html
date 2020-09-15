@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <title>Order history tracking fields | Campaignified | kelseyjudson.dev</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1" />
+  <link href="../../../kelseyjudson.dev.css" rel="stylesheet" />
+</head>
+<body>
+  <main>
+    <section>
+      <nav class="breadcrumbs">
+        <a href="/campaignified/docs">Campaignified</a><span class="divider">/</span><a href="/campaignified/docs/pricing-and-plans">Pricing and plans</a><span class="divider">/</span>Order history tracking fields
+      </nav>
+      <!-- TODO: Breadcrumbs, for app-name/slug, category-name/slug. -->
+      <h1>Order history tracking fields</h1>
+      <nav class="toc">
+        <ul>
+        <li><a href="#last-20-discount-codes-used">Last 20 Discount Codes Used</a></li>
+        <li><a href="#last-20-products-ordered">Last 20 Products Ordered</a></li>
+        <li><a href="#favourite-product">Favourite Product</a></li>
+        <li><a href="#orders-tracked-count">Orders Tracked Count</a></li>
+        <li><a href="#average-spent">Average Spent</a></li>
+        <li><a href="#total-discounted-average-discounted">Total Discounted, Average Discounted</a></li>
+        <li><a href="#total-quantity-average-quantity">Total Quantity, Average Quantity</a></li>
+        <li><a href="#most-spent-least-spent">Most Spent, Least Spent</a></li>
+        <li><a href="#most-discounted-least-discounted">Most Discounted, Least Discounted</a></li>
+        </ul>
+      </nav>
+       <p>In late 2015, we added a new plan which introduced extra fields that used data derived from a customer’s full order history. The plan has since been retired and we have made all the new fields available under the cheaper Premium plan!</p>
+       <p>The extra fields available are as follows:</p>
+       <h3 id="last-20-discount-codes-used">Last 20 Discount Codes Used</h3>
+       <p>This includes a comma separated list of the most recent discount codes used. This is capped at 20, although may be truncated before 20 if the codes are quite long.</p>
+       <h3 id="last-20-products-ordered">Last 20 Products Ordered</h3>
+       <p>This takes the form of a list of product IDs separated by commas. We have had to cap this at 20 IDs due to Campaign Monitor’s 250 character custom fields. See the related articles below.</p>
+       <h3 id="favourite-product">Favourite Product</h3>
+       <p>The product most frequently ordered by the customer.</p>
+       <h3 id="orders-tracked-count">Orders Tracked Count</h3>
+       <p>The number of orders tracked in this customer’s order history in Campaignified, as opposed to ‘Orders Count’ which is the total number of orders a customer has made according to Shopify. Most other history tracking fields such as ‘Average Quantity’ are based on this field’s value. If there is a discrepancy between these two values, this is due to the fact that Campaignified does not distinguish between cancelled or unfulfilled orders, while Shopify’s value does. This may be subject to change in future.</p>
+       <p>This field is mainly included for informational purposes and has limited value for segments.</p>
+       <h3 id="average-spent">Average Spent</h3>
+       <p>Unlike the other averaged fields, this is calculated from Shopify’s supplied data for ‘Orders Count’ and ‘Total Spent’, rather than Campaignified’s tracked history. See ‘Orders Tracked Count’ above for more information on what this means.</p>
+       <h3 id="total-discounted-average-discounted">Total Discounted, Average Discounted</h3>
+       <p>The total and average discounts applied to orders across the tracked history. This may be useful to find frequent customers who have never had a discount.</p>
+       <h3 id="total-quantity-average-quantity">Total Quantity, Average Quantity</h3>
+       <p>The total and average quantity of items per order across the tracked history. This may be useful for distinguishing customers who order in bulk versus customers who only order one or two of an item.</p>
+       <h3 id="most-spent-least-spent">Most Spent, Least Spent</h3>
+       <p>The most spent and least spent on a single order.</p>
+       <h3 id="most-discounted-least-discounted">Most Discounted, Least Discounted</h3>
+       <p>The most discounted and the least discounted on a single order.</p>
+    </section>
+  </main>
+</body>
+</html>

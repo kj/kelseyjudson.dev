@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+root = File.realpath("#{__dir__}/..")
+
+Dir.chdir(root)
+
+manifest = JSON.parse(File.read('manifest.json'))
+
+manifest.values.each do |app|
+  app['docs']['categories'].each do |category|
+    category['articles'].each do |article|
+      path = "#{app['slug']}/docs/#{category['slug']}/#{article['slug']}"
+
+      system 'pandoc', '--from=markdown+gfm_auto_identifiers+smart',
+                       '--template=templates/article.html',
+                       "--metadata=app-name:#{app['name']}",
+                       "--metadata=app-slug:#{app['slug']}",
+                       "--metadata=category-name:#{category['name']}",
+                       "--metadata=category-slug:#{category['slug']}",
+                       "--metadata=title:#{article['name']}",
+                       "--output=#{path}.html",
+                       '--to=html',
+                       '--toc',
+                       "#{path}.md"
+    end
+  end
+end

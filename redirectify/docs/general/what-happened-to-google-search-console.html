@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <title>What happened to Google Search Console? | Redirectify | kelseyjudson.dev</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1" />
+  <link href="../../../kelseyjudson.dev.css" rel="stylesheet" />
+</head>
+<body>
+  <main>
+    <section>
+      <nav class="breadcrumbs">
+        <a href="/redirectify/docs">Redirectify</a><span class="divider">/</span><a href="/redirectify/docs/general">General</a><span class="divider">/</span>What happened to Google Search Console?
+      </nav>
+      <!-- TODO: Breadcrumbs, for app-name/slug, category-name/slug. -->
+      <h1>What happened to Google Search Console?</h1>
+      <nav class="toc">
+        <ul>
+        <li><a href="#import-data-from-google-search-console">Import data from Google Search Console</a></li>
+        </ul>
+      </nav>
+       <p>Redirectify originally pulled crawl errors from Google Search Console automatically to populate its list of 404 paths. Unfortunately, in April 2019, Google pulled support for accessing this data and we had to rethink the app. Since then, we’ve replaced Google Search Console with live tracking on your storefront to pick up errors as customers encounter them, and a CSV upload feature. As Google Search Console is still a useful source of errors, we’ve made the CSV upload feature compatible with Google Search Console data exports.</p>
+       <h3 id="import-data-from-google-search-console">Import data from Google Search Console</h3>
+       <ol type="1">
+       <li>In the search console sidebar, click <a href="https://search.google.com/search-console/index">Coverage</a></li>
+       <li>Make sure the <strong>‘Error’</strong> status is selected</li>
+       <li>Click to expand the error reason, such as <strong>‘Submitted URL not found (404)’</strong></li>
+       <li>Click the <strong>‘Export data’</strong> button in the upper-right corner of the <strong>‘Details’</strong> section</li>
+       <li>Click <strong>‘Download CSV’</strong></li>
+       <li>Import the downloaded CSV file into Redirectify as usual</li>
+       </ol>
+    </section>
+  </main>
+</body>
+</html>
