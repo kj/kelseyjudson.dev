@@ -28,7 +28,7 @@ wildcard matching any string of text. For example, a rule with the pattern
 -would match each of the following paths:
 
     /blogs/old-name/meet-the-team
-    /blogs/old-name/what-goes-into-our-products
+    /blogs/old-name/our-story
     /blogs/old-name/how-we-support-local-businesses
 
 Rules must match the full path from beginning to end. Therefore, if you want to
