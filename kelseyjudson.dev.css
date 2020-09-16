@@ -87,6 +87,13 @@ li::before {
   margin: 0 0.5em;
 }
 
+.category li {
+  margin-left: 0;
+}
+.category li::before {
+  display: none;
+}
+
 .lead {
   font-size: 1.5em;
 }
