@@ -26,4 +26,15 @@ manifest.values.each do |app|
                        "#{path}.md"
     end
   end
+
+  path = "#{app['slug']}/privacy"
+
+  system 'pandoc', '--from=markdown+gfm_auto_identifiers+smart',
+                   '--template=templates/privacy.html',
+                   "--metadata=app-name:#{app['name']}",
+                   "--metadata=title:Privacy Policy for #{app['name']}",
+                   "--output=#{path}.html",
+                   '--to=html',
+                   '--toc',
+                   "#{path}.md"
 end
