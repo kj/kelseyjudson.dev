@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-  <title>Proactive tracking | Redirectify | kelseyjudson.dev</title>
+  <title>Proactive tracking | Docs | Redirectify | kelseyjudson.dev</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1" />
   <link href="../../../kelseyjudson.dev.css" rel="stylesheet" />
@@ -10,21 +10,20 @@
   <main>
     <section>
       <nav class="breadcrumbs">
-        <a href="/redirectify/docs">Redirectify</a><span class="divider">/</span><a href="/redirectify/docs/general">General</a><span class="divider">/</span>Proactive tracking
+        <a href="/redirectify/docs">Redirectify</a><span class="divider">/</span><a href="/redirectify/docs#general">General</a><span class="divider">/</span>Proactive tracking
       </nav>
-      <!-- TODO: Breadcrumbs, for app-name/slug, category-name/slug. -->
       <h1>Proactive tracking</h1>
-       <p>Proactive tracking is enabled for all shops using Redirectify. Proactive tracking works by reacting to actions performed by the store owner in the Shopify admin. When a relevant action occurs, a path or paths are added to Redirectify proactively – giving you the chance to act before they become an issue for customers.</p>
-       <p>The following actions will result in paths being created in Redirectify:</p>
-       <ul>
-       <li>When a collection is deleted, create a path for /collections/<strong>collection-handle</strong></li>
-       <li>When a product is deleted, create paths for /products/<strong>product-handle</strong> and /collections/<strong>all-collection-handles</strong>/products/<strong>product-handle</strong></li>
-       <li>When a page is deleted, create a path for /pages/<strong>page-handle</strong></li>
-       <li>When a blog is deleted, create paths for /blogs/<strong>blog-handle</strong> and /blogs/<strong>blog-handle</strong>/<strong>blog-post-handle</strong></li>
-       <li>When a blog post is deleted, create a path for /blogs/<strong>blog-handle</strong>/<strong>blog-post-handle</strong></li>
-       <li>When a product handle is changed, create paths for /collections/<strong>all-collection-handles</strong>/products/<strong>product-handle</strong></li>
-       </ul>
-       <p>For all other cases, importing a path into Redirectify is unnecessary as Shopify itself automatically creates a redirect. For example, when a collection is deleted, all product URLs within the collection will redirect to /products/<strong>product-handle</strong>. .</p>
+      <p>Proactive tracking is enabled for all shops using Redirectify. Proactive tracking works by reacting to actions performed by the store owner in the Shopify admin. When a relevant action occurs, a path or paths are added to Redirectify proactively – giving you the chance to act before they become an issue for customers.</p>
+      <p>The following actions will result in paths being created in Redirectify:</p>
+      <ul>
+      <li>When a collection is deleted, create a path for /collections/<strong>collection-handle</strong></li>
+      <li>When a product is deleted, create paths for /products/<strong>product-handle</strong> and /collections/<strong>all-collection-handles</strong>/products/<strong>product-handle</strong></li>
+      <li>When a page is deleted, create a path for /pages/<strong>page-handle</strong></li>
+      <li>When a blog is deleted, create paths for /blogs/<strong>blog-handle</strong> and /blogs/<strong>blog-handle</strong>/<strong>blog-post-handle</strong></li>
+      <li>When a blog post is deleted, create a path for /blogs/<strong>blog-handle</strong>/<strong>blog-post-handle</strong></li>
+      <li>When a product handle is changed, create paths for /collections/<strong>all-collection-handles</strong>/products/<strong>product-handle</strong></li>
+      </ul>
+      <p>For all other cases, importing a path into Redirectify is unnecessary as Shopify itself automatically creates a redirect. For example, when a collection is deleted, all product URLs within the collection will redirect to /products/<strong>product-handle</strong>. .</p>
     </section>
   </main>
 </body>

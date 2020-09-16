@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-  <title>$title$ | $app-name$ | kelseyjudson.dev</title>
+  <title>$title$ | Docs | $app-name$ | kelseyjudson.dev</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1" />
   <link href="../../../kelseyjudson.dev.css" rel="stylesheet" />
@@ -10,16 +10,15 @@
   <main>
     <section>
       <nav class="breadcrumbs">
-        <a href="/$app-slug$/docs">$app-name$</a><span class="divider">/</span><a href="/$app-slug$/docs/$category-slug$">$category-name$</a><span class="divider">/</span>$title$
+        <a href="/$app-slug$/docs">$app-name$</a><span class="divider">/</span><a href="/$app-slug$/docs#$category-slug$">$category-name$</a><span class="divider">/</span>$title$
       </nav>
-      <!-- TODO: Breadcrumbs, for app-name/slug, category-name/slug. -->
       <h1>$title$</h1>
 $if(toc)$
       <nav class="toc">
         $table-of-contents$
       </nav>
 $endif$
-       $body$
+      $body$
     </section>
   </main>
 </body>
