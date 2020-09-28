@@ -1,11 +1,14 @@
 :root {
   --color-border: rgba(0, 0, 0, 0.1);
-  --color-highlight: #9900ff;
+  /* --color-highlight: #9900ff; */
+  --color-highlight: #d28aff;
+  --color-text: #333;
   --header-height: 4rem;
   --page-padding: 1rem;
   --page-width: 88ch;
   --page-max-width: calc(100vw - var(--page-padding) * 2);
 
+  color: var(--color-text);
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 16px;
   line-height: 1.4;
@@ -97,6 +100,21 @@ li::before {
 
 img {
   display: block;
+}
+
+.theme-mono .header {
+  font-family: 'IBM Plex Mono', monospace;
+}
+.theme-mono .header .logo img {
+  border: 1px solid var(--color-text);
+  border-radius: 1.5rem;
+  padding: 0.2rem;
+}
+.theme-mono .header .logo a:hover img {
+  background-color: var(--color-highlight);
+}
+.theme-mono .header .menu > ul > li a {
+  letter-spacing: 0;
 }
 
 .page-padding {
