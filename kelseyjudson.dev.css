@@ -175,11 +175,24 @@ img {
   margin: 0 0.5em;
 }
 
+.category + .category {
+  margin-top: 2rem;
+}
 .category li {
   margin-left: 0;
+  padding: 1rem 0;
+}
+.category li + li {
+  border-top: 1px solid var(--color-border);
 }
 .category li::before {
   display: none;
+}
+.category a {
+  color: inherit;
+}
+.category a:hover {
+  color: var(--color-highlight);
 }
 
 .lead {
