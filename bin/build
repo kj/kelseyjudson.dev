@@ -20,7 +20,7 @@ manifest.values.each do |app|
 
       pandoc_options = [
         '--from=markdown+gfm_auto_identifiers+smart',
-        '--template=templates/docs/article.html',
+        '--template=templates/apps_docs_article.html',
         "--metadata=app-name:#{app['name']}",
         "--metadata=app-slug:#{app['slug']}",
         "--metadata=category-name:#{category['name']}",
@@ -48,7 +48,7 @@ manifest.values.each do |app|
 
   pandoc_options = [
     '--from=html',
-    '--template=templates/docs/index.html',
+    '--template=templates/apps_docs_index.html',
     "--metadata=app-name:#{app['name']}",
     "--metadata=title:Privacy Policy for #{app['name']}",
     "--output=#{path}",
@@ -62,7 +62,7 @@ manifest.values.each do |app|
 
   pandoc_options = [
     '--from=markdown+gfm_auto_identifiers+smart',
-    '--template=templates/privacy.html',
+    '--template=templates/apps_privacy.html',
     "--metadata=app-name:#{app['name']}",
     "--metadata=title:Privacy Policy for #{app['name']}",
     "--output=#{path}.html",

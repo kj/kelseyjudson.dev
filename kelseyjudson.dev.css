@@ -208,6 +208,13 @@ img {
 .breadcrumbs .divider {
   margin: 0 0.5em;
 }
+.breadcrumbs .current {
+  font-weight: 700;
+  max-width: 20em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .category + .category {
   margin-top: 2rem;
@@ -227,6 +234,19 @@ img {
 }
 .category a:hover {
   color: var(--color-highlight);
+}
+
+.icon {
+  display: inline-flex;
+}
+.icon svg {
+  height: 23px;
+}
+.icon path {
+  stroke: currentColor;
+}
+.icon + * {
+  margin-left: 6px;
 }
 
 .lead {
