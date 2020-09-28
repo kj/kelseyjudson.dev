@@ -12,7 +12,8 @@
             },
             {
               "name": "Using a newsletter signup form",
-              "slug": "using-a-newsletter-signup-form"
+              "slug": "using-a-newsletter-signup-form",
+              "toc": true
             },
             {
               "name": "How does Shopify handle consent for email marketing?",
@@ -46,7 +47,8 @@
           "articles": [
             {
               "name": "Filtering subscribers by products ordered",
-              "slug": "filtering-subscribers-by-products-ordered"
+              "slug": "filtering-subscribers-by-products-ordered",
+              "toc": true
             },
             {
               "name": "Should I use a pre-existing list?",
@@ -58,7 +60,8 @@
             },
             {
               "name": "Suggestions for list segments",
-              "slug": "suggestions-for-list-segments"
+              "slug": "suggestions-for-list-segments",
+              "toc": true
             },
             {
               "name": "What happens when I ‘unlink’ my Campaign Monitor account?",
@@ -84,7 +87,8 @@
             },
             {
               "name": "Order history tracking fields",
-              "slug": "order-history-tracking-fields"
+              "slug": "order-history-tracking-fields",
+              "toc": true
             },
             {
               "name": "Do I need to reselect my list when I upgrade my plan?",
@@ -122,7 +126,8 @@
             },
             {
               "name": "Rules",
-              "slug": "rules"
+              "slug": "rules",
+              "toc": true
             },
             {
               "name": "Filters",

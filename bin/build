@@ -18,17 +18,21 @@ manifest.values.each do |app|
     category['articles'].each do |article|
       path = "#{app['slug']}/docs/#{category['slug']}/#{article['slug']}"
 
-      system 'pandoc', '--from=markdown+gfm_auto_identifiers+smart',
-                       '--template=templates/docs/article.html',
-                       "--metadata=app-name:#{app['name']}",
-                       "--metadata=app-slug:#{app['slug']}",
-                       "--metadata=category-name:#{category['name']}",
-                       "--metadata=category-slug:#{category['slug']}",
-                       "--metadata=title:#{article['name']}",
-                       "--output=#{path}.html",
-                       '--to=html',
-                       '--toc',
-                       "#{path}.md"
+      pandoc_options = [
+        '--from=markdown+gfm_auto_identifiers+smart',
+        '--template=templates/docs/article.html',
+        "--metadata=app-name:#{app['name']}",
+        "--metadata=app-slug:#{app['slug']}",
+        "--metadata=category-name:#{category['name']}",
+        "--metadata=category-slug:#{category['slug']}",
+        "--metadata=title:#{article['name']}",
+        "--output=#{path}.html",
+        '--to=html',
+        article['toc'] ? '--toc' : nil,
+        "#{path}.md",
+      ]
+
+      system 'pandoc', *pandoc_options.compact
 
       index_html << %(<li><a href="/#{path}.html">#{article['name']}</a></li>)
     end
@@ -42,23 +46,29 @@ manifest.values.each do |app|
   t.write(index_html.join("\n"))
   t.close
 
-  system 'pandoc', '--from=html',
-                   '--template=templates/docs/index.html',
-                   "--metadata=app-name:#{app['name']}",
-                   "--metadata=title:Privacy Policy for #{app['name']}",
-                   "--output=#{path}",
-                   '--to=html',
-                   '--toc',
-                   t.path
+  pandoc_options = [
+    '--from=html',
+    '--template=templates/docs/index.html',
+    "--metadata=app-name:#{app['name']}",
+    "--metadata=title:Privacy Policy for #{app['name']}",
+    "--output=#{path}",
+    '--to=html',
+    t.path,
+  ]
+
+  system 'pandoc', *pandoc_options.compact
 
   path = "#{app['slug']}/privacy"
 
-  system 'pandoc', '--from=markdown+gfm_auto_identifiers+smart',
-                   '--template=templates/privacy.html',
-                   "--metadata=app-name:#{app['name']}",
-                   "--metadata=title:Privacy Policy for #{app['name']}",
-                   "--output=#{path}.html",
-                   '--to=html',
-                   '--toc',
-                   "#{path}.md"
+  pandoc_options = [
+    '--from=markdown+gfm_auto_identifiers+smart',
+    '--template=templates/privacy.html',
+    "--metadata=app-name:#{app['name']}",
+    "--metadata=title:Privacy Policy for #{app['name']}",
+    "--output=#{path}.html",
+    '--to=html',
+    "#{path}.md",
+  ]
+
+  system 'pandoc', *pandoc_options.compact
 end

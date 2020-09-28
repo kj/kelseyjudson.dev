@@ -24,7 +24,7 @@ body {
 
 @media (min-width: 720px) {
   @supports (hyphens: auto) {
-    main {
+    p {
       hyphens: auto;
       text-align: justify;
     }
