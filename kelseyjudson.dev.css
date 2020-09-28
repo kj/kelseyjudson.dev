@@ -18,7 +18,8 @@
 }
 
 body {
-  margin-top: var(--header-height);
+  padding-bottom: calc(var(--header-height) * 1.5);
+  padding-top: var(--header-height);
 }
 
 *,
@@ -38,7 +39,8 @@ section > * + h3 {
   margin-top: 3rem;
 }
 section > h1 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: calc(var(--header-height) * 1.5);
 }
 section > h3 {
   margin-top: 1.5rem;
@@ -99,6 +101,7 @@ img {
 }
 
 .header {
+  background-color: #fff;
   height: var(--header-height);
   position: fixed;
   top: 0;
@@ -175,7 +178,7 @@ img {
 }
 
 .toc {
-  margin: 2.5rem 0 3.5rem;
+  margin: 2rem 0 3rem;
 }
 .toc ul {
   margin: 0;
