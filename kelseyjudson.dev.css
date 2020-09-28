@@ -2,6 +2,7 @@
   --color-border: rgba(0, 0, 0, 0.1);
   /* --color-highlight: #9900ff; */
   --color-highlight: #d28aff;
+  --color-highlight-dark: #2b004b;
   --color-text: #333;
   --header-height: 4rem;
   --page-padding: 1rem;
@@ -71,6 +72,9 @@ section > * + h2 {
 
 a {
   color: var(--color-highlight);
+}
+a:hover {
+  color: var(--color-highlight-dark);
 }
 
 h1 {
