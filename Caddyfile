@@ -1,0 +1,8 @@
+{
+	http_port 10080
+	https_port 10443
+}
+
+localhost
+
+file_server
