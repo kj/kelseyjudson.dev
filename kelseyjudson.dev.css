@@ -189,6 +189,18 @@ img {
   display: block;
 }
 
+.breadcrumbs {
+  align-items: center;
+  display: flex;
+  height: 2rem;
+  justify-content: flex-end;
+}
+.breadcrumbs a {
+  color: inherit;
+}
+.breadcrumbs a:hover {
+  color: var(--color-highlight);
+}
 .breadcrumbs .divider {
   margin: 0 0.5em;
 }
