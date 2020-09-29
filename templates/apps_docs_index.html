@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="theme-mono" lang="en-NZ">
 <head>
-  <title>Docs | $app-name$ | kelseyjudson.dev</title>
+  <title>$if(is-category-index)$$category-slug$ | $endif$Docs | $app-name$ | kelseyjudson.dev</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1" />
   ${head_includes()}
@@ -11,7 +11,7 @@
   <main>
     <section class="page-width">
       <nav class="breadcrumbs">
-        <a href="/">Home</a><span class="divider">/</span><span class="current">$app-name$ Docs</span>
+        <a href="/">Home</a><span class="divider">/</span>$if(is-category-index)$<a href="/$app-slug$/docs/">$app-name$ Docs</a><span class="divider">/</span><span class="current">$category-name$</span>$else$<span class="current">$app-name$ Docs</span>$endif$
       </nav>
       <h1>$app-name$ Docs</h1>
       $body$

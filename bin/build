@@ -12,9 +12,10 @@ manifest = JSON.parse(File.read('manifest.json'))
 manifest.values.each do |app|
   index_html = []
   app['docs']['categories'].each do |category|
-    index_html << %(<div class="category" id="#{category['slug']}">)
-    index_html << %(<h2>#{category['name']}</h2>)
-    index_html << %(<ul>)
+    category_index_html = []
+    category_index_html << %(<div class="category" id="#{category['slug']}">)
+    category_index_html << %(<h2>#{category['name']}</h2>)
+    category_index_html << %(<ul>)
     category['articles'].each do |article|
       path = "#{app['slug']}/docs/#{category['slug']}/#{article['slug']}"
 
@@ -34,23 +35,47 @@ manifest.values.each do |app|
 
       system 'pandoc', *pandoc_options.compact
 
-      index_html << %(<li><a href="/#{path}.html">#{article['name']}</a></li>)
+      category_index_html << %(<li><a href="/#{path}.html">#{article['name']}</a></li>)
     end
-    index_html << %(</ul>)
-    index_html << %(</div>)
+    category_index_html << %(</ul>)
+    category_index_html << %(</div>)
+
+    path = "#{app['slug']}/docs/#{category['slug']}/index.html"
+
+    t = Tempfile.new
+    t.write(category_index_html.join("\n"))
+    t.close
+
+    pandoc_options = [
+      '--from=html',
+      '--template=templates/apps_docs_index.html',
+      "--metadata=app-name:#{app['name']}",
+      "--metadata=app-slug:#{app['slug']}",
+      "--metadata=category-name:#{category['name']}",
+      "--metadata=category-slug:#{category['slug']}",
+      "--metadata=is-category-index:true",
+      "--metadata=title:#{app['name']} Docs",
+      "--output=#{path}",
+      '--to=html',
+      t.path,
+    ]
+
+    system 'pandoc', *pandoc_options.compact
+
+    index_html << category_index_html
   end
 
   path = "#{app['slug']}/docs/index.html"
 
   t = Tempfile.new
-  t.write(index_html.join("\n"))
+  t.write(index_html.flatten.join("\n"))
   t.close
 
   pandoc_options = [
     '--from=html',
     '--template=templates/apps_docs_index.html',
     "--metadata=app-name:#{app['name']}",
-    "--metadata=title:Privacy Policy for #{app['name']}",
+    "--metadata=title:#{app['name']} Docs",
     "--output=#{path}",
     '--to=html',
     t.path,
