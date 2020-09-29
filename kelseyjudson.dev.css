@@ -39,7 +39,7 @@
   line-height: 1.4;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   :root {
     --page-padding: 4rem;
   }
@@ -50,7 +50,7 @@ body {
   padding-top: var(--header-height);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   @supports (hyphens: auto) {
     p {
       hyphens: auto;
@@ -216,6 +216,22 @@ img {
 .header .menu > ul > li + li {
   margin-left: 1rem;
 }
+.header .menu > ul > li:not(.is-primary-menu) {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header .menu > ul > li:not(.is-primary-menu) {
+    display: block;
+  }
+}
+.header .menu > ul > li > a > span {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header .menu > ul > li > a > span {
+    display: inline;
+  }
+}
 .header .menu > ul > li > a {
   align-items: center;
   border: 1px solid;
@@ -249,12 +265,19 @@ img {
   border: 1px solid var(--color-highlight-dark);
   border-radius: 3px;
   color: var(--color-highlight-dark);
-  left: 0;
   margin: 0;
   min-width: 100%;
   padding: 0.6rem 3rem 1rem 1rem;
   position: absolute;
-  top: 2.5rem;
+  right: 0;
+  top: 3.5rem;
+}
+@media (min-width: 768px) {
+  .header .menu .dropdown {
+    left: 0;
+    right: auto;
+    top: 2.5rem;
+  }
 }
 .header .menu .is-open .dropdown {
   display: block;
