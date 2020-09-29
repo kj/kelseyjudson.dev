@@ -1,9 +1,9 @@
 Getting up and running with Campaignified is extremely easy. All you need is a
 Shopify store and a Campaign Monitor account.
 
-First, either install the app through the [Shopify App
+First, install the app through the [Shopify App
 Store](https://apps.shopify.com/campaignified), or visit
-<https://campaignified.lucidapps.nz> and enter your shop domain (e.g.
+<https://campaignified.xyz> and enter your shop domain (e.g.
 'example.myshopify.com').
 
 Once you've authenticated Campaignified with your Shopify store, you will need
