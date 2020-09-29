@@ -7,5 +7,5 @@ lists](https://help.campaignmonitor.com/category-lists-and-subscribers).
 
 For more info on how *Campaignified* and *Campaign Monitor* work together, take
 a look at this article: [What is the difference between Campaignified and
-Campaign Monitor?](http://help.lucid.co.nz/campaignified-shopify-app/general/what-is-the-difference-between-campaignified-and-campaign-monitor)
-e-between-campaignified-and-campaign-monitor)
+Campaign
+Monitor?](/campaignified/docs/general/what-is-the-difference-between-campaignified-and-campaign-monitor.html)
