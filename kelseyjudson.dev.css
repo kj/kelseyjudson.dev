@@ -140,10 +140,28 @@ img {
 }
 .header-inner {
   align-items: center;
+  background-color: #fff;
   border-bottom: 1px solid;
   display: flex;
   height: 100%;
   margin: 0 auto;
+  position: relative;
+}
+.header-inner::after {
+  border-radius: 50%;
+  bottom: 0;
+  box-shadow: none;
+  content: '';
+  height: 100%;
+  left: 5%;
+  position: absolute;
+  right: 5%;
+  transition: box-shadow 1s;
+  width: 90%;
+  z-index: -1;
+}
+.is-scrolled .header-inner::after {
+  box-shadow: 0 0 2rem rgba(0,0,0,0.333);
 }
 .header .logo img {
   height: 3rem;
