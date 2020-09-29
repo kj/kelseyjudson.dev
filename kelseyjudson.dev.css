@@ -300,7 +300,16 @@ img {
   align-items: center;
   display: flex;
   height: 2rem;
-  justify-content: flex-end;
+  overflow: auto;
+}
+@media (min-width: 768px) {
+  .breadcrumbs {
+    justify-content: flex-end;
+  }
+}
+.breadcrumbs a,
+.breadcrumbs span {
+  white-space: nowrap;
 }
 .breadcrumbs a {
   color: inherit;
@@ -313,10 +322,12 @@ img {
 }
 .breadcrumbs .current {
   font-weight: 700;
-  max-width: 20em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .breadcrumbs .current {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .category + .category {
