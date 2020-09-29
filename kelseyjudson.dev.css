@@ -227,6 +227,7 @@ img {
   padding: 0 0.6em;
   text-decoration: none;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 /*
 .header .menu > ul > li > a:hover {
