@@ -96,9 +96,10 @@ section > * + h2 {
 
 a {
   color: var(--color-highlight);
-}
-a:hover {
-  color: var(--color-highlight-dark);
+
+  &:hover {
+    color: var(--color-highlight-dark);
+  }
 }
 
 h1 {
@@ -251,9 +252,6 @@ img {
   text-transform: uppercase;
   vertical-align: middle;
 }
-// .header .menu > ul > li > a:hover {
-//   color: var(--color-highlight);
-// }
 .header .menu > ul > li > a:hover,
 .header .menu > ul > li.is-open > a {
   background-color: var(--color-highlight);
@@ -312,9 +310,10 @@ img {
 .header .menu .dropdown a {
   color: var(--color-highlight-dark);
   white-space: nowrap;
-}
-.header .menu .dropdown a:hover {
-  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .breadcrumbs {
@@ -333,9 +332,10 @@ img {
 }
 .breadcrumbs a {
   color: inherit;
-}
-.breadcrumbs a:hover {
-  color: var(--color-highlight);
+
+  &:hover {
+    color: var(--color-highlight);
+  }
 }
 .breadcrumbs .divider {
   margin: 0 0.5em;
@@ -364,9 +364,10 @@ img {
 }
 .category a {
   color: inherit;
-}
-.category a:hover {
-  color: var(--color-highlight);
+
+  &:hover {
+    color: var(--color-highlight);
+  }
 }
 
 .icon {
