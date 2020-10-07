@@ -4,7 +4,7 @@ kelseyjudson.dev
 Development
 -----------
 
-### Run the webserver
+### Run the web server
 
     $ ./bin/start
 
