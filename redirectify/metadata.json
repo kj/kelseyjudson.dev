@@ -1,0 +1,21 @@
+{
+  "redirectify": {
+    "links": [
+      {
+        "href": "https://apps.shopify.com/redirectify",
+        "text": "Install"
+      },
+      {
+        "href": "/redirectify/docs/general/getting-started-with-redirectify.html",
+        "text": "Getting Started"
+      },
+      {
+        "href": "/redirectify/docs/",
+        "text": "Docs"
+      }
+    ],
+    "name": "Redirectify",
+    "slug": "redirectify",
+    "summary": "Efficiently and effectively redirect 404 errors to improve SEO."
+  }
+}

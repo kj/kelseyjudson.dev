@@ -1,0 +1,21 @@
+{
+  "campaignified": {
+    "links": [
+      {
+        "href": "https://apps.shopify.com/campaignified",
+        "text": "Install"
+      },
+      {
+        "href": "/campaignified/docs/general/getting-started-with-campaignified.html",
+        "text": "Getting Started"
+      },
+      {
+        "href": "/campaignified/docs/",
+        "text": "Docs"
+      }
+    ],
+    "name": "Campaignified",
+    "slug": "campaignified",
+    "summary": "Sync detailed customer and order data to Campaign Monitor."
+  }
+}
