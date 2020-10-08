@@ -1,8 +1,13 @@
 {
   "redirectify": {
+    "icon": {
+      "src": "icon_512.png"
+    },
     "links": [
       {
+        "external": true,
         "href": "https://apps.shopify.com/redirectify",
+        "primary": true,
         "text": "Install"
       },
       {

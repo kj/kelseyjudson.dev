@@ -1,8 +1,13 @@
 {
   "campaignified": {
+    "icon": {
+      "src": "icon_512.svg"
+    },
     "links": [
       {
+        "external": true,
         "href": "https://apps.shopify.com/campaignified",
+        "primary": true,
         "text": "Install"
       },
       {

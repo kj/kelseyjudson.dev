@@ -141,20 +141,34 @@ img {
   display: block;
 }
 
-.theme-mono .header {
-  font-family: 'IBM Plex Mono', monospace;
+@mixin button {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 3px;
+  color: inherit;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.6em;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:hover {
+    @include button-hover;
+  }
 }
-.theme-mono .header .logo img {
-  border: 1px solid var(--color-text);
-  border-radius: 1.5rem;
-  padding: 0.2rem;
-}
-.theme-mono .header .logo a:hover img {
+@mixin button-hover {
   background-color: var(--color-highlight);
   border-color: var(--color-highlight-dark);
+  color: var(--color-highlight-dark);
 }
-.theme-mono .header .menu > ul > li a {
-  letter-spacing: 0;
+.button {
+  @include button;
+}
+.button-primary {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: #fff;
+  font-weight: 700;
 }
 
 .page-padding {
@@ -169,6 +183,7 @@ img {
 
 .header {
   background-color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
   height: var(--header-height);
   position: fixed;
   top: 0;
@@ -200,7 +215,14 @@ img {
   box-shadow: 0 0 2rem rgba(0,0,0,0.333);
 }
 .header .logo img {
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
   height: 3rem;
+  padding: 0.2rem;
+}
+.header .logo a:hover img {
+  background-color: var(--color-highlight);
+  border-color: var(--color-highlight-dark);
 }
 .header .logo + .name {
   margin-left: 1rem;
@@ -240,23 +262,12 @@ img {
   }
 }
 .header .menu > ul > li > a {
-  align-items: center;
-  border: 1px solid;
-  border-radius: 3px;
-  color: inherit;
-  display: inline-flex;
-  height: 2rem;
-  letter-spacing: 0.0333em;
-  padding: 0 0.6em;
-  text-decoration: none;
+  @include button;
+
   text-transform: uppercase;
-  vertical-align: middle;
 }
-.header .menu > ul > li > a:hover,
 .header .menu > ul > li.is-open > a {
-  background-color: var(--color-highlight);
-  border-color: var(--color-highlight-dark);
-  color: var(--color-highlight-dark);
+  @include button-hover;
 }
 .header .menu .has-dropdown {
   position: relative;
@@ -407,4 +418,54 @@ img {
   display: grid;
   min-height: calc(100vh - var(--header-height) * 2);
   place-items: center;
+}
+
+.app {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 3px;
+  display: flex;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+.app + .app {
+  margin-top: 1rem;
+}
+.app-icon {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+.app-icon img {
+  border-radius: 50%;
+  height: 8rem;
+}
+.app-icon + .app-details {
+  @media (min-width: 768px) {
+    margin-left: 2rem;
+  }
+}
+.app-details > * + * {
+  margin-top: 1rem;
+}
+.app-links {
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media (min-width: 768px) {
+    flex-flow: row nowrap;
+  }
+}
+.app-links > * + * {
+  margin-top: 0.5rem;
+
+  @media (min-width: 768px) {
+    margin-left: 0.5rem;
+    margin-top: 0;
+  }
 }

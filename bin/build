@@ -101,10 +101,12 @@ end
 pandoc_options = [
 '--from=markdown+gfm_auto_identifiers+smart',
 '--template=templates/home.html',
-"--metadata=title:Home",
-"--output=index.html",
+'--metadata=title:Home',
+'--metadata-file=campaignified/metadata.json',
+'--metadata-file=redirectify/metadata.json',
+'--output=index.html',
 '--to=html',
-"index.md",
+'index.md',
 ]
 
 system 'pandoc', *pandoc_options.compact
