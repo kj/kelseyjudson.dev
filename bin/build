@@ -99,14 +99,14 @@ manifest.values.each do |app|
 end
 
 pandoc_options = [
-'--from=markdown+gfm_auto_identifiers+smart',
-'--template=templates/home.html',
-'--metadata=title:Home',
-'--metadata-file=campaignified/metadata.json',
-'--metadata-file=redirectify/metadata.json',
-'--output=index.html',
-'--to=html',
-'index.md',
+  '--from=markdown+gfm_auto_identifiers+smart',
+  '--template=templates/home.html',
+  '--metadata=title:Home',
+  '--metadata-file=campaignified/metadata.json',
+  '--metadata-file=redirectify/metadata.json',
+  '--output=index.html',
+  '--to=html',
+  'index.md',
 ]
 
 system 'pandoc', *pandoc_options.compact
