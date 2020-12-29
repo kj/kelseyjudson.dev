@@ -2,25 +2,25 @@
   font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/IBMPlexMono-Regular.subset.woff2') format('woff2');
+  src: url('/assets/fonts/IBMPlexMono-Regular.subset.woff2') format('woff2');
 }
 @font-face {
   font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/IBMPlexMono-Bold.subset.woff2') format('woff2');
+  src: url('/assets/fonts/IBMPlexMono-Bold.subset.woff2') format('woff2');
 }
 @font-face {
   font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/IBMPlexSans-Regular.subset.woff2') format('woff2');
+  src: url('/assets/fonts/IBMPlexSans-Regular.subset.woff2') format('woff2');
 }
 @font-face {
   font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/IBMPlexSans-Bold.subset.woff2') format('woff2');
+  src: url('/assets/fonts/IBMPlexSans-Bold.subset.woff2') format('woff2');
 }
 
 // Firefox does not render translate transforms smoothly.

@@ -111,4 +111,4 @@ pandoc_options = [
 
 system 'pandoc', *pandoc_options.compact
 
-system 'dart-sass -s compressed kelseyjudson.dev.scss kelseyjudson.dev.css'
+system 'dart-sass -s compressed assets/kelseyjudson.dev.scss assets/kelseyjudson.dev.css'
