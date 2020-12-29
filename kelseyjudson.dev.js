@@ -13,6 +13,54 @@ document.documentElement.addEventListener('click', event => {
   }
 });
 
+// Lang
+
+function getCurrentLang() {
+  const match = location.pathname.match(/^\/(\w\w)\//);
+
+  if (match) {
+    return match[1];
+  } else {
+    return null;
+  }
+}
+
+function getLang() {
+  const preferredLang = localStorage.getItem('lang');
+
+  if (preferredLang) {
+    return preferredLang;
+  }
+
+  const navigatorLang = navigator.language.slice(0, 2);
+
+  switch (navigatorLang) {
+  case 'en':
+    return setLang('en');
+  case 'es':
+    return setLang('es');
+  default:
+    return setLang('en');
+  }
+}
+
+function setLang(lang) {
+  localStorage.setItem('lang', lang);
+
+  return lang;
+}
+
+function redirectToPreferredLang() {
+  const currentLang = getCurrentLang();
+  const lang = getLang();
+
+  if (currentLang === null || currentLang !== lang) {
+    window.location = window.location.pathname
+      .replace(/^\/(\w\w)\//, '/')
+      .replace(/^/, `${lang}`);
+  }
+}
+
 // Scroll
 
 function setIsScrolled() {
