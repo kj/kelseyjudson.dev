@@ -22,4 +22,3 @@ For all other cases, importing a path into Redirectify is unnecessary as Shopify
 itself automatically creates a redirect. For example, when a collection is
 deleted, all product URLs within the collection will redirect to
 /products/**product-handle**.
-.
