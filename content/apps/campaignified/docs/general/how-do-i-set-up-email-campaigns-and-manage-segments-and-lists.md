@@ -16,4 +16,4 @@ lists](https://help.campaignmonitor.com/category-lists-and-subscribers).
 For more info on how *Campaignified* and *Campaign Monitor* work together, take
 a look at this article: [What is the difference between Campaignified and
 Campaign
-Monitor?](/campaignified/docs/general/what-is-the-difference-between-campaignified-and-campaign-monitor.html)
+Monitor?](/apps/campaignified/docs/general/what-is-the-difference-between-campaignified-and-campaign-monitor)

@@ -11,8 +11,8 @@ redirect creation. Each rule consists of a 'pattern' to match imported paths by,
 and a 'target path' which will be used to create a redirect for any path that
 matches the pattern. Rules are applied to all paths imported into the app
 whether manually (uploaded from a CSV file) or via
-[live](/redirectify/docs/general/live-tracking.html) or
-[proactive](/redirectify/docs/general/proactive-tracking.html)
+[live](/apps/redirectify/docs/general/live-tracking) or
+[proactive](/apps/redirectify/docs/general/proactive-tracking)
 tracking.
 
 With cleverly set up rules for automation, you may very rarely need to enter the
