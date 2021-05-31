@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <title>
+  Filters
+  
+    
+
+    
+      
+        | General
+      
+    
+  
+    
+
+    
+      
+        | Redirectify Docs
+      
+    
+  
+    
+
+    
+  
+    
+
+    
+  
+    
+
+    
+      
+        | kelseyjudson.dev
+      
+    
+  
+</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1" />
+  <link href="/assets/kelseyjudson.dev.css" rel="stylesheet" />
+  <link href="/favicon.png" rel="icon" />
+  <script defer src="/assets/kelseyjudson.dev.js"></script>
+</head>
+<body class="">
+  <header class="header">
+    <div class="header-inner page-width">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/logo_256.png" />
+        </a>
+      </div>
+      <div class="name">
+        kelseyjudson.dev
+      </div>
+      <nav class="menu">
+        <ul>
+          <li class="has-dropdown is-primary-menu">
+            <a class="button" href="#">
+              <div class="icon">
+                <svg version="1.1" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m4.5 8.5 7 7 7-7" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1px"/>
+                </svg>
+              </div>
+              <span>
+                Shopify apps
+              </span>
+            </a>
+            <ul class="dropdown">
+              <h3>Campaignified</h3>
+              <li><a href="https://apps.shopify.com/campaignified" target="_blank">Install</a></li>
+              <li><a href="/apps/campaignified/docs/">Docs</a></li>
+              <li><a href="/apps/campaignified/privacy">Privacy policy</a></li>
+              <h3>Redirectify</h3>
+              <li><a href="https://apps.shopify.com/redirectify" target="_blank">Install</a></li>
+              <li><a href="/apps/redirectify/docs/">Docs</a></li>
+              <li><a href="/apps/redirectify/privacy">Privacy policy</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="button" href="mailto:hello@kelseyjudson.dev">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    
+  <section class="page-width">
+    
+  
+    <nav class="breadcrumbs">
+      
+        
+
+        
+          <a href="&#x2F;">Home</a><span class="divider">/</span>
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+          <a href="&#x2F;apps&#x2F;redirectify&#x2F;docs&#x2F;">Redirectify Docs</a><span class="divider">/</span>
+        
+      
+        
+
+        
+          <a href="&#x2F;apps&#x2F;redirectify&#x2F;docs&#x2F;general&#x2F;">General</a><span class="divider">/</span>
+        
+      
+      <span class="current">Filters</span>
+    </nav>
+  
+
+    <h1>Filters</h1>
+    
+    <p>The <strong>Filters</strong> page in Redirectify allows you to prevent certain paths from
+showing up in your list based on matching patterns. This can be useful when you
+know that a path is irrelevant, and doesn’t need to be fixed. There are two
+types of pattern which you can toggle between; <strong>Wildcard</strong> and the more
+advanced <strong>Regexp</strong> (short for ‘regular expression’).</p>
+<h3 id="wildcard-filters">Wildcard filters</h3>
+<p>Wildcard filters are the easiest to use. They make use the ‘*’ character as a
+wildcard matching any string of text. For example, the filter</p>
+<pre><code>/collections/*/products/t-shirt
+</code></pre>
+<p>-would match each of the following paths:</p>
+<pre><code>/collections/men/products/t-shirt
+/collections/women/products/t-shirt
+/collections/kids/products/t-shirt
+</code></pre>
+<p>The filter</p>
+<pre><code>/collections/kids/products/*
+</code></pre>
+<p>-would match any product under the given collection.</p>
+<p>Wildcard filters must match the full path from beginning to end, so the filter
+<code>products/*</code> would not match any path, but the filter <code>*/products/*</code> may.</p>
+<h3 id="regexp-filters">Regexp filters</h3>
+<p>Regular expressions are very powerful, but quite a complex topic. Rather than
+trying to cover them here, you can learn the basics fairly quickly through <a rel="noopener" target="_blank" href="https://github.com/ziishaned/learn-regex/blob/master/README.md">this
+guide</a>.</p>
+<p>Regexp filters need not match the full path like wildcard type filters, but will
+apply when they match any part. The filter</p>
+<pre><code>t-shirt
+</code></pre>
+<p>-would match any of the paths in the first example, but would also match any
+other path including the text ‘t-shirt’ at any point.</p>
+
+  </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% import 'macros/apps.html' as apps %}
+
+{% block title %}Kelsey Judson | Web Developer | kelseyjudson.dev{% endblock %}
+
+{% block content %}
+  <section class="page-width welcome">
+    {{ section.content | safe }}
+  </section>
+  <section class="app-list page-width">
+    {{ apps::card(name='redirectify') }}
+    {{ apps::card(name='campaignified') }}
+  </section>
+{% endblock %}

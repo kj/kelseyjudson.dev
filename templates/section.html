@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% import 'macros/common.html' as common %}
+
+{% block title %}{{ common::page_title(current_page=section) }}{% endblock %}
+
+{% block content %}
+  <section class="page-width">
+    {{ common::breadcrumbs(current_page=section) }}
+    <h1>{{ section.title }}</h1>
+    {{ section.content }}
+    {% for path in section.subsections %}
+      {% set category = get_section(path=path) %}
+
+      <div class="category" id="{{ category.components | last }}">
+        <h2>{{ category.title }}</h2>
+        <ul>
+          {% for article in category.pages %}
+            <li><a href="{{ article.path }}">{{ article.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+    {% if section.pages | length > 0 %}
+      <div class="category" id="{{ section.components | last }}">
+        <ul>
+          {% for article in section.pages %}
+            <li><a href="{{ article.path }}">{{ article.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </section>
+{% endblock %}

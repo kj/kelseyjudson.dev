@@ -1,0 +1,29 @@
+{% macro breadcrumbs(current_page) %}
+  {% if current_page.ancestors | length > 0 %}
+    <nav class="breadcrumbs">
+      {% for path in current_page.ancestors %}
+        {% set ancestor = get_section(path=path, metadata_only=true) %}
+
+        {% if ancestor.extra.skip_breadcrumb is undefined %}
+          <a href="{{ ancestor.path }}">{{ ancestor.title }}</a><span class="divider">/</span>
+        {% endif %}
+      {% endfor %}
+      <span class="current">{{ current_page.title }}</span>
+    </nav>
+  {% endif %}
+{% endmacro %}
+
+{% macro page_title(current_page) %}
+  {{ current_page.title }}
+  {% for path in current_page.ancestors | reverse %}
+    {% set ancestor = get_section(path=path, metadata_only=true) %}
+
+    {% if ancestor.extra.skip_breadcrumb is undefined %}
+      {% if loop.last %}
+        | kelseyjudson.dev
+      {% else %}
+        | {{ ancestor.title }}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}

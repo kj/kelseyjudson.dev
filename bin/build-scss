@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# The sass NPM package is Dart Sass compiled to JavaScript, which is much slower
+# than the sass executable which bundles the Dart VM. Unfortunately, the name
+# conflicts with the obsolete Ruby version, which a lot of software still uses,
+# so we check for a dart-sass executable.
+#
+# If the NPM package ever bundles the Dart VM (like the GitHub releases), then
+# that can be used instead.
+
+cd "$(dirname "$0")"/..
+
+if command -v sass >/dev/null && sass -h | grep -q 'Dart Sass'; then
+	sass=sass
+fi
+
+if command -v dart-sass >/dev/null; then
+	sass=dart-sass
+fi
+
+if [ -z "$sass" ]; then
+	printf 'Could not find Dart Sass\n'
+	exit 1
+fi
+
+$sass -s compressed "$@" kelseyjudson.dev.scss static/assets/kelseyjudson.dev.css

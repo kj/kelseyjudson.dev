@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"/..
 
-caddy run
+zola serve -p ${PORT:-8080} "$@"
