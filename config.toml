@@ -1,5 +1,5 @@
 base_url = 'https://kelseyjudson.dev'
-output_dir = 'docs'
+output_dir = 'dist'
 
 [markdown]
 external_links_target_blank = true
