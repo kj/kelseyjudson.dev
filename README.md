@@ -15,18 +15,6 @@ Development
     $ ./bin/build
 
 
-GitHub
-------
-
-Push the dist subdirectory to the gh-pages branch on GitHub:
-
-    $ git subtree push --prefix dist origin gh-pages
-
-This is aliased as:
-
-    $ ./bin/deploy
-
-
 Privacy policies
 ----------------
 

@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"/..
 
-zola build "$@" && cp CNAME dist/
+zola build "$@"
