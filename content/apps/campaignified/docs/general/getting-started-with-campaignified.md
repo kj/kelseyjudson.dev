@@ -11,7 +11,7 @@ Shopify store and a Campaign Monitor account.
 
 First, install the app through the [Shopify App
 Store](https://apps.shopify.com/campaignified), or visit
-<https://campaignified.xyz> and enter your shop domain (e.g.
+<https://campaignified.app> and enter your shop domain (e.g.
 'example.myshopify.com').
 
 Once you've authenticated Campaignified with your Shopify store, you will need
