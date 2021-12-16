@@ -1,5 +1,5 @@
 +++
-title = 'Getting started with Redirectify'
+title = 'Getting started'
 weight = 1
 
 [extra]

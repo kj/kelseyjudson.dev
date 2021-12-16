@@ -23,7 +23,7 @@ tmux_start () {
 		./bin/start
 	tmux split-window -d -t $session_name:watch \
 		./bin/build-scss -w
-	tmux set-option -g -t $session_name remain-on-exit on
+	tmux set-option -t $session_name remain-on-exit on
 	set +e; trap - EXIT
 }
 
