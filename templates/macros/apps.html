@@ -1,19 +1,29 @@
 {% macro card(name) %}
   {% set app_section = get_section(path='apps/' ~ name ~ '/_index.md', metadata_only=true) %}
   {% set app_card = load_data(path='content/apps/' ~ name ~ '/card.toml') %}
+  {% set app_hero_image = get_image_metadata(path='static/assets/' ~ name ~ '/hero.png', allow_missing=true) %}
 
   <div class="app app-{{ app_section.components | last }}">
-    <div class="app-icon">
-      <img src="/assets/{{ app_section.components | last }}/{{ app_card.icon_filename }}" />
-    </div>
-    <div class="app-details">
-      <h2>{{ app_section.title }}</h2>
-      <p class="app-summary">{{ app_section.description }}</p>
-      <div class="app-links">
-        {% for link in app_card.links %}
-          <a class="button {% if link.primary %}button-primary{% endif %}" href="{{ link.href }}" {% if link.external %}target="_blank"{% endif %}>{{ link.text }}</a>
-        {% endfor %}
+    <div class="app-row">
+      <div class="app-icon">
+        <img src="/assets/{{ app_section.components | last }}/{{ app_card.icon_filename }}" />
+      </div>
+      <div class="app-details">
+        <h2>{{ app_section.title }}</h2>
+        <p class="app-summary">{{ app_section.description }}</p>
+        <div class="app-links">
+          {% for link in app_card.links %}
+            <a class="button {% if link.primary %}button-primary{% endif %}" href="{{ link.href }}" {% if link.external %}target="_blank"{% endif %}>{{ link.text }}</a>
+          {% endfor %}
+        </div>
       </div>
     </div>
+    {% if app_hero_image %}
+      <div class="app-row">
+        <div class="app-hero-image">
+          <img src="/assets/{{ name }}/hero.png" width="{{ app_hero_image.width }}" height="{{ app_hero_image.height }}" />
+        </div>
+      </div>
+    {% endif %}
   </div>
 {% endmacro %}

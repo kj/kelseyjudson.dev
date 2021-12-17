@@ -150,6 +150,8 @@ li::before {
 
 img {
   display: block;
+  height: auto;
+  width: 100%;
 }
 
 @mixin button {
@@ -419,9 +421,14 @@ img {
 }
 
 .app {
-  align-items: center;
   border: 1px solid var(--color-border);
   border-radius: 3px;
+}
+.app + .app {
+  margin-top: 1rem;
+}
+.app-row {
+  align-items: center;
   display: flex;
   padding: 1rem;
 
@@ -429,8 +436,8 @@ img {
     padding: 2rem;
   }
 }
-.app + .app {
-  margin-top: 1rem;
+.app-row + .app-row {
+  border-top: 1px solid var(--color-border);
 }
 .app-icon {
   display: none;
@@ -469,4 +476,7 @@ img {
     margin-left: 0.5rem;
     margin-top: 0;
   }
+}
+.app-hero-image img {
+  border-radius: 3px;
 }
