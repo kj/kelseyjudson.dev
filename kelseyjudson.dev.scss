@@ -20,6 +20,12 @@
   }
 }
 
+// It seems to render a little better now (still not perfect, but definitely an
+// improvement).
+@mixin except-firefox {
+  @content;
+}
+
 :root {
   --color-border: rgba(45, 48, 62, 0.1);
   --color-highlight: #8563d0; // HSLuv 275 67 50
