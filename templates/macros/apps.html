@@ -1,7 +1,7 @@
 {% macro card(name) %}
   {% set app_section = get_section(path='apps/' ~ name ~ '/_index.md', metadata_only=true) %}
   {% set app_card = load_data(path='content/apps/' ~ name ~ '/card.toml') %}
-  {% set app_hero_image = get_image_metadata(path='static/assets/' ~ name ~ '/hero.png', allow_missing=true) %}
+  {% set app_hero_image = get_image_metadata(path='assets/' ~ name ~ '/hero.png', allow_missing=true) %}
 
   <div class="app app-{{ app_section.components | last }}">
     <div class="app-row">
