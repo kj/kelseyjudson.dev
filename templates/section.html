@@ -5,7 +5,7 @@
 {% block title %}{{ common::page_title(current_page=section) }}{% endblock %}
 
 {% block content %}
-  <section class="page-width">
+  <section class="template-section page-width">
     {{ common::breadcrumbs(current_page=section) }}
     <h1>{{ section.title }}</h1>
     {{ section.content }}

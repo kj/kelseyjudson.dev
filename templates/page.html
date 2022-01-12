@@ -5,7 +5,7 @@
 {% block title %}{{ common::page_title(current_page=page) }}{% endblock %}
 
 {% block content %}
-  <section class="page-width">
+  <section class="template-page page-width">
     {{ common::breadcrumbs(current_page=page) }}
     <h1>{{ page.title }}</h1>
     {% if page.extra.toc %}

@@ -14,9 +14,10 @@ issue for customers.
 
 The following actions will result in paths being created in Redirectify:
 
-* When a collection is deleted, create a path for
+* When a collection is deleted or unpublished, create a path for
   /collections/**collection-handle**
-* When a product is deleted, create paths for /products/**product-handle** and
+* When a product is deleted or unpublished, create paths for
+  /products/**product-handle** and
   /collections/**all-collection-handles**/products/**product-handle**
 * When a page is deleted, create a path for /pages/**page-handle**
 * When a blog is deleted, create paths for /blogs/**blog-handle** and
