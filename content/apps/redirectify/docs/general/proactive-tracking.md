@@ -15,19 +15,21 @@ issue for customers.
 The following actions will result in paths being created in Redirectify:
 
 * When a collection is deleted or unpublished, create a path for
-  /collections/**collection-handle**
+  <span class="path">/collections/**collection-handle**</span>
 * When a product is deleted or unpublished, create paths for
-  /products/**product-handle** and
-  /collections/**all-collection-handles**/products/**product-handle**
-* When a page is deleted, create a path for /pages/**page-handle**
-* When a blog is deleted, create paths for /blogs/**blog-handle** and
-  /blogs/**blog-handle**/**blog-post-handle**
+  <span class="path">/products/**product-handle**</span> and
+  <span class="path">/collections/**all-collection-handles**/products/**product-handle**</span>
+* When a page is deleted, create a path for
+  <span class="path">/pages/**page-handle**</span>
+* When a blog is deleted, create paths for
+  <span class="path">/blogs/**blog-handle**</span> and
+  <span class="path">/blogs/**blog-handle**/**blog-post-handle**</span>
 * When a blog post is deleted, create a path for
-  /blogs/**blog-handle**/**blog-post-handle**
+  <span class="path">/blogs/**blog-handle**/**blog-post-handle**</span>
 * When a product handle is changed, create paths for
-  /collections/**all-collection-handles**/products/**product-handle**
+  <span class="path">/collections/**all-collection-handles**/products/**product-handle**</span>
 
 For all other cases, importing a path into Redirectify is unnecessary as Shopify
 itself automatically creates a redirect. For example, when a collection is
 deleted, all product URLs within the collection will redirect to
-/products/**product-handle**.
+<span class="path">/products/**product-handle**</span>.
