@@ -6,7 +6,7 @@ Development
 
 ### Development environment
 
-    $ ./bin/tmux-session
+    $ tmux-session
 
 
 ### Build
